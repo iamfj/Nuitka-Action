@@ -168,6 +168,9 @@ inputs:
       Include raw directories completely in the distribution. This is
       recursive. Check '--include-data-dir' to use the sane option.
       Default empty.
+  follow-imports:
+    description: |
+      Follow imports to the given module name. Can be given multiple times. Default empty.
 
   ### Control the inclusion of modules and packages in result. ###
   include-package:
@@ -204,7 +207,7 @@ inputs:
       Allow Nuitka to download external code if necessary, e.g. dependency
       walker, ccache, and even gcc on Windows. To disable, redirect input
       from nul device, e.g. "</dev/null" or "<NUL:". Default is to prompt.
-    default: true
+    default: "true"
   nowarn-mnemonic:
     description: |
       Disable warning for a given mnemonic. These are given to make sure you are aware of
